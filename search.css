@@ -1,0 +1,52 @@
+/**
+ *  format ; (?=[^\s\}])
+ **/
+body {background-color: white;}
+.search button {border: 0; outline: 0; padding: 0;}
+.search input {padding: 0; outline: 0; border: 0;}
+
+/****  通用样式  ****/
+.search .ctnHide {display: none!important;}
+.search .num-highlight {color: #e74c3c;}
+.search .hide {display: none!important;}
+/*网格*/
+.search .flb-box {display: -webkit-box;}
+    .search .flb-p1 {-webkit-box-flex:1; display: block;}
+
+/*按钮*/
+.search .btn {color: #666666; font-size: 13px; /* display: inline-block; */ 
+    padding: 0 10px; background-color: #fbfbfb; border-radius: 5px; border: 1px solid #e9e9e9;}
+.search .btn-label {position: relative; padding-left: 31px;}
+    .search .label {height: 16px; width: 16px; border-radius: 1px; position: absolute; left: 5px; top: 5px;
+        color: white; font-size: 12px; line-height: 12px; text-align: center; background-color: #bdc3c7; 
+        padding: 2px 0 2px 0; border-radius: 16px;}
+    .search .label.red {background-color: #e74c3c;}
+    .search .label.orn {background-color: #e67e22;}
+    .search .label.blue {background-color: #f1c40f;}
+
+/*标题*/
+.search .title-head {display: -webkit-box; padding: 0 10px; margin-bottom: 10px; margin-top: 7px;}
+    .search .title-text {-webkit-box-flex:1; color: #2279c3; font-size: 13px; line-height: 13px; padding: 6px 0;
+        position: relative; font-size: 13px; }
+    .search .title-btn {height: 18px; line-height: 18px; border-radius: 18px; padding: 0 10px;}
+    .search .title-btn-del {font-size: 10px; text-align: center; background-color: #efefef; background-size: 12px 15px;
+        color: #999999}
+/****  通用样式  END  ****/
+
+
+/****  搜索历史  ****/
+.search .search-history {padding: 0 10px;}
+    .search .history-item {width: 145px; height: 28px; line-height: 28px; margin-bottom: 10px; -webkit-box-flex:1;
+        display: block;}
+    .search .history-item-holder {width: 145px; margin-bottom: 7px; -webkit-box-flex:1; display: block;}
+        .search .history-text {width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+            text-align: center;}
+    .search .history-holder {width: 12px;}
+
+
+/****  搜索风云榜  ****/
+.search .search-board {padding: 0 10px;}
+    .search .board-item {width: 145px; height: 28px; line-height: 28px; margin-bottom: 10px;
+        text-overflow: ellipsis; overflow: hidden; white-space: nowrap; -webkit-box-flex:1; display: block;}
+    .search .board-item.hide {display: none;}
+    .search .board-holder {width: 12px;}

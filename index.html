@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Demo -- the MVVM Framework</title>
+    <link rel="stylesheet" href="./search.css">
+    <style>
+        .hide {
+            display: none;
+        }
+        .index-header {
+            line-height: 50px; font-size: 18px;
+            height: 50px;   
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            padding: 0;
+            border-bottom: 1px solid #666;
+            line-height: 30px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search page" id="search">
+    <div class=""></div>
+    <div class="" >
+        <input type="text" class="search-input" 
+            v-model="searchInput"
+            v-on="input: fetchSuggetion"
+        >
+    </div>
+    <div>
+        <div>搜索关键字: {{searchInput}}</div>
+        <ul>
+            <li v-repeat="suggetions">{{name}}</li>
+        </ul>
+    </div>
+    <div class="{{suggestionStatus}}">
+        <div class="title-head {{historyPanelStatus}}">
+            <div class="title-text">搜索历史</div>
+            <div class="title-btn title-btn-del tap-on tap-shadow" 
+                v-on="click: clearHistories">清空</div>
+        </div>
+        <div class="search-history {{historyPanelStatus}}" v-repeat="histories">
+            <button>{{name}}</button>
+        </div>
+        <div class="title-head">
+            <div class="title-text">搜索风云榜</div>
+        </div>
+        <div class="search-board">
+            <button v-repeat="boards">{{$value}}</button>
+        </div>
+    <div class="searchFooter"></div>
+</div>
+
+
+    <script src="bower_components/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
