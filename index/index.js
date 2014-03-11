@@ -1,16 +1,7 @@
 !function (exports) {
     'use strict;'
-    Vue.component('vd-ello', {
-        template: 'hello world',
-        data: {
-            title: '首页'
-        },
-        created: function () {
-            console.log('header instance');
-        }
-    });
 
-    var index = new Vue({
+    var Index = Vue.extend({
 
         el: '#search',
 
@@ -51,6 +42,6 @@
         
     });
 
-    exports.index = index;
+    exports.Index = Index;
 
 }(window);
