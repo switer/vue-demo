@@ -1,10 +1,21 @@
 !function (exports) {
     'use strict;'
+    Vue.component('vd-ello', {
+        template: 'hello world',
+        data: {
+            title: '首页'
+        },
+        created: function () {
+            console.log('header instance');
+        }
+    });
 
     var index = new Vue({
 
         el: '#search',
 
+        paramAttributes: ['message'],
+        
         data: {
             searchInput: '',
             histories: [],
@@ -12,13 +23,9 @@
             suggetions: [],
             historyPanelStatus: 'hide'
         },
-        directives: {
-
-        },
         created: function () {
+            console.log(this.message);
             this.fetchHistories();
-        },
-        computed: {
         },
         methods: {
             clearHistories: function () {
