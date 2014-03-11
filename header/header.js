@@ -1,6 +1,6 @@
 !function (exports) {
-    Vue.component('vd-ello', {
-        template: 'hello world',
+    Vue.component('vd-header', {
+        template: '#tpl-header',
         data: {
             title: '首页'
         },
