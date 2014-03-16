@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./index/index.css">
+    <link rel="stylesheet" href="./search/search.css">
     <link rel="stylesheet" href="./header/header.css">
 </head>
 <body>
@@ -15,7 +16,22 @@
         <span class="title">{{title}}</span>
     </div>
 </script>
-<div class="search" id="search" message="hellow world">
+
+<!-- index -->
+<div class="index hide" id="index" 
+    v-class="
+        hide: notInit
+    ">
+    <div v-component="v-header"></div>
+    <div>{{title}}</div>
+</div>
+
+
+<!-- search -->
+<div class="search hide" id="search" message="hellow world"
+    v-class="
+        hide: notInit
+    ">
     <div v-component="vd-header"></div>
     <div class="" >
         <input type="text" class="search-input" 
@@ -46,10 +62,17 @@
         </div>
 </div>
 
+
+
+
     <script src="bower_components/vue/dist/vue.js"></script>
+    <!-- 
     <script src="bower_components/page/index.js"></script>
+     -->
+    <script src="bower_components/director/build/director.js"></script>
     <script src="./header/header.js"></script>
     <script src="./index/index.js"></script>
+    <script src="./search/search.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

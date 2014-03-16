@@ -1,47 +1,26 @@
 !function (exports) {
     'use strict;'
 
-    var Index = Vue.extend({
-
-        el: '#search',
-
-        paramAttributes: ['message'],
+    function index () {
         
-        data: {
-            searchInput: '',
-            histories: [],
-            boards: ['风云榜1', '风云榜2'],
-            suggetions: [],
-            historyPanelStatus: 'hide'
-        },
-        created: function () {
-            console.log(this.message);
-            this.fetchHistories();
-        },
-        methods: {
-            clearHistories: function () {
-                this.historyPanelStatus = 'hide';
+        return new Vue({
+
+            el: '#index',
+            
+            data: {
+                notInit: true,
+                title: 'index home page'
             },
-            fetchHistories: function () {
-                var that = this;
-                setTimeout( function() {
-                    console.log('loaded ~~~~!');
-                    that.histories = [{name: '爸爸去哪儿'}, {name: '我是歌手'}];
-                    that.historyPanelStatus = '';
-                }, 2000);
+            created: function () {
+                this.notInit = false;
             },
-            fetchSuggetion: function () {
-                var that = this;
-                setTimeout( function() {
-                    that.suggetions = [
-                        {name: '爸爸去哪儿' + that.searchInput}, 
-                        {name: '我是歌手' + that.searchInput}];
-                }, 10);
+            methods: {
+
             }
-        }
-        
-    });
+            
+        });
+    }
 
-    exports.Index = Index;
+    exports.index = index;
 
 }(window);
